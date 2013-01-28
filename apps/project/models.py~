@@ -7,7 +7,7 @@ class Project(models.Model):
     tanggal_mulai = models.DateTimeField()
     tanggal_selesai = models.DateTimeField()
     project_manager = models.ForeignKey(Employee, related_name="project_manager")
-    programmers = models.ManyToManyField(Employee, related_name="programmers")
+    employee = models.ManyToManyField(Employee)
     location = models.CharField(max_length=255)
     description = models.TextField()
     

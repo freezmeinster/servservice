@@ -1,4 +1,48 @@
 {% extends "base.html" %}
 {% block container %}
-
+<div class="span9" id="content">
+                   
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-title">
+                    Employee list
+                </div>
+                <div class="box-content nopadding">
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                                <tr>
+                                        <th>Full Name</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>as</th>
+                                        <th>CSS grade</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            {% for data in users %}
+                                <tr class="odd gradeX">
+                                        <td>{{ data.get_full_name }}</td>
+                                        <td>{{ data.username }}</td>
+                                        <td>{{ data.email }}</td>
+                                        <td class="center"> 4</td>
+                                        <td class="center">X</td>
+                                </tr>
+                            {% endfor %}    
+                        </tbody>
+                        <tfoot>
+                                <tr>
+                                        <th>Rendering engine</th>
+                                        <th>Browser</th>
+                                        <th>Platform(s)</th>
+                                        <th>Engine version</th>
+                                        <th>CSS grade</th>
+                                </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

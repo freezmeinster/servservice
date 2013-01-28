@@ -4,13 +4,13 @@
     <div class="row-fluid quick-actions">
                         
         <div class="span2">
-            <a class="quick-action" href="{% url employee_index %}">
+            <a class="quick-action" href="#">
                 <span class="icon users"></span>
                 Add Employee
             </a>
         </div>
        <div class="span2">
-            <a class="quick-action" href="{% url office_index %}">
+            <a class="quick-action" href="#">
                 <span class="icon inbox"></span>
                 Office List
             </a>
@@ -33,18 +33,18 @@
                         <thead>
                                 <tr>
                                         <th>Full Name</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
                                         <th>Position</th>
                                         <th>Phone</th>
                                 </tr>
                         </thead>
                         <tbody>
-                            {% for data in employees %}
+                            {% for data in offices %}
                                 <tr class="odd gradeX">
-                                        <td>{{ data.get_full_name }}</td>
-                                        <td>{{ data.username }}</td>
-                                        <td>{{ data.email }}</td>
+                                        <td>{{ data.name }}</td>
+                                        <td>{{ data.address }}</td>
+                                        <td>{{ data.phone }}</td>
                                         <td class="center">{{ data.get_position_display }}</td>
                                         <td class="center">{{ data.phone }}</td>
                                 </tr>
